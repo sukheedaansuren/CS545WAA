@@ -13,9 +13,9 @@
     </head>
     <body>
         <h1>Guess the number!</h1>
-        <%= request.getAttribute("message") %>
+        <%= request.getAttribute("message") != null ? request.getAttribute("message") : "" %>
         <form method=GET action=GuessnumberServlet>
-            Number=<input type=text name=number pattern='\\d'> <br>
+            Number=<input type=text name=number pattern='\d'> <br>
             <input type=submit value='Guess'>
         </form>
     </body>
