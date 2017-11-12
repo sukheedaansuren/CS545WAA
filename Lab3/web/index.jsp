@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Oct 21, 2017, 2:27:45 PM
-    Author     : Khandaa
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

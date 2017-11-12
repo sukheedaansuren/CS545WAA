@@ -6,10 +6,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Khandaa
- */
 @WebServlet(urlPatterns = {"/LogonServlet"})
 public class LogonServlet extends HttpServlet {
 

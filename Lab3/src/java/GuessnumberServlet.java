@@ -7,10 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Khandaa
- */
 @WebServlet(urlPatterns = {"/GuessnumberServlet"})
 public class GuessnumberServlet extends HttpServlet {
 
