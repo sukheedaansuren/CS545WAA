@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Calculator</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            First number:
+            <h:inputText value="#{calcManagedBean.first}" />
+            <br/><br/>
+            Second number:
+            <h:inputText value="#{calcManagedBean.second}" />
+            <br/><br/>
+            <h:commandButton value="Add" action="#{calcManagedBean.add}" />
+            <h:commandButton value="Subtract" action="#{calcManagedBean.sub}" />
+            <h:commandButton value="Multiply" action="#{calcManagedBean.mul}" />
+            <h:commandButton value="Divide" action="#{calcManagedBean.divide}" />
+            <br/><br/>
+            Result 
+            <h:outputText value="#{calcManagedBean.result}" />
+        </h:form>
+    </h:body>
+</html>
+
