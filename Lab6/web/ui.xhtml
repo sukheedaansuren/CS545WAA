@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Search for flight</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            From
+            <h:selectOneMenu value="#{flightBean.from}">
+                <f:selectItem itemValue="Amsterdam"></f:selectItem>
+                <f:selectItem itemValue="Paris"></f:selectItem>
+                <f:selectItem itemValue="Lissabon"></f:selectItem>
+            </h:selectOneMenu>
+            <br/>
+            <br/>
+            To 
+            <h:selectOneMenu value="#{flightBean.to}">
+                <f:selectItem itemValue="New York"></f:selectItem>
+                <f:selectItem itemValue="Boston"></f:selectItem>
+                <f:selectItem itemValue="Chicago"></f:selectItem>
+            </h:selectOneMenu>
+            <br/>
+            <br/>
+            Departure date
+            <h:inputText value="#{flightBean.departureDate}"></h:inputText>
+            <br/>
+            <br/>
+            Return date
+            <h:inputText value="#{flightBean.returnDate}"></h:inputText>
+            <br/>
+            <br/>
+            <h:selectOneRadio value="#{flightBean.oneway}">
+                <f:selectItem itemValue="round" itemLabel="Round trip"></f:selectItem>
+                <f:selectItem itemValue="oneway" itemLabel="One way"></f:selectItem>
+            </h:selectOneRadio>
+            <br/>
+            <br/>            
+            <h:selectManyCheckbox value="#{flightBean.seatClasses}">
+                <f:selectItems value="#{flightBean.seatClassesValue}"></f:selectItems>
+            </h:selectManyCheckbox>
+            <br/>
+            <br/>  
+            <h:commandButton value="Submit" action="result" />
+        </h:form>
+    </h:body>
+</html>
+
