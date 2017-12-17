@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Employees</title>
+    </h:head>
+    <h:body>
+        <table border="1" cellpadding="2" cellspacing="2">
+            <tr><td colspan="2" style="color:red;font-size:20px;">Employees of ACME Inc.</td></tr>
+            <tr>
+                <td>
+                    <h:form>
+                    <h:dataTable value="#{empBean.employees}" var="e" border="1">
+                        <h:column>
+                                <h:commandLink value="#{e.name}" action="#{empBean.show}">
+                                    <f:param name="empId" value="#{e.id}" />
+                                </h:commandLink>
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandButton value="Show All" action="/showall.xhtml"/>
+                    </h:form>
+                </td>
+                <td>
+                    <ui:insert name="show"/>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head><title>IGNORED</title></head>
+    <body>
+        <ui:composition template="/index.xhtml">
+            <ui:define name="show">
+                <table border="1">
+                    <tr>
+                        <td>id</td>
+                        <td>#{empBean.employee.id}</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>#{empBean.employee.name}</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>#{empBean.employee.phone}</td>
+                    </tr>
+                    <tr>
+                        <td>salary</td>
+                        <td>#{empBean.employee.salary}</td>
+                    </tr>
+                </table>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
+
