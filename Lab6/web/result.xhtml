@@ -7,24 +7,22 @@
         <title>Search for flight</title>
     </h:head>
     <h:body>
-        <h:form>
-            From: #{flightBean.from}
-            <br/>
-            <br/>
-            To: #{flightBean.to}
-            <br/>
-            <br/>
-            Departure date: #{flightBean.departureDate}
-            <br/>
-            <br/>
-            Return date: #{flightBean.returnDate}
-            <br/>
-            <br/>
-            #{flightBean.oneway}
-            <br/>
-            <br/>
-            Options: #{flightBean.seatClassesInString} 
-        </h:form>
+        From: #{flightBean.from}
+        <br/>
+        <br/>
+        To: #{flightBean.to}
+        <br/>
+        <br/>
+        Departure date: #{flightBean.departureDate}
+        <br/>
+        <br/>
+        Return date: #{flightBean.returnDate}
+        <br/>
+        <br/>
+        #{flightBean.oneway}
+        <br/>
+        <br/>
+        Options: #{flightBean.seatInString}
     </h:body>
 </html>
 

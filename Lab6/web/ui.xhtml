@@ -38,11 +38,13 @@
             </h:selectOneRadio>
             <br/>
             <br/>            
-            <h:selectManyCheckbox value="#{flightBean.seatClasses}">
-                <f:selectItems value="#{flightBean.seatClassesValue}"></f:selectItems>
+            <h:selectManyCheckbox value="#{flightBean.seat}">
+                <f:selectItem itemValue="first" itemLabel="First class"></f:selectItem>
+                <f:selectItem itemValue="exact" itemLabel="Exact these dates"></f:selectItem>
+                <f:selectItem itemValue="stopover" itemLabel="No stopover"></f:selectItem>
             </h:selectManyCheckbox>
             <br/>
-            <br/>  
+            <br/>
             <h:commandButton value="Submit" action="result" />
         </h:form>
     </h:body>

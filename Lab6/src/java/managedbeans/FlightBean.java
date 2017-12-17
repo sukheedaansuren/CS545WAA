@@ -6,50 +6,33 @@
 package managedbeans;
 
 import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
-/**
- *
- * @author Khandaa
- */
-@ManagedBean("flightBean")
+@ManagedBean(name = "flightBean")
 @SessionScoped
 public class FlightBean {
+
     public String from;
     public String to;
     public String departureDate;
     public String returnDate;
     public String oneway;
-    public static String[] seatClasses = {"first", "exact", "stopover"};
-    public static Map<String, Object> seatClassesValue;
+    public String[] seat;
 
-    static {
-        seatClassesValue = new LinkedHashMap();
-        seatClassesValue.put("first", "First class");
-        seatClassesValue.put("exact", "Exact these dates");
-        seatClassesValue.put("stopover", "No stopover");
+    public String getSeatInString() {
+        return Arrays.toString(seat);
     }
-
-    public static String[] getSeatClasses() {
-        return seatClasses;
-    }
-
-    public static void setSeatClasses(String[] seatClasses) {
-        FlightBean.seatClasses = seatClasses;
-    }
-
-    public Map<String, Object> getSeatClassesValue() {
-        return seatClassesValue;
-    }
-
-    public String getSeatClassesInString() {
-        return Arrays.toString(seatClasses);
-    }
-
     
+    
+    public String[] getSeat() {
+        return seat;
+    }
+    
+    public void setSeat(String[] seat) {
+        this.seat = seat;
+    }
+
     public String getFrom() {
         return from;
     }
@@ -89,5 +72,4 @@ public class FlightBean {
     public void setOneway(String oneway) {
         this.oneway = oneway;
     }
-
 }
