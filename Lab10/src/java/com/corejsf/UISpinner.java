@@ -94,6 +94,11 @@ public class UISpinner extends UIInput {
         Integer maximum = toInteger(getAttributes().get("maximum"));
         int newValue = submittedValue + increment;
 
+        if (maximum != null && submittedValue > maximum)
+            return maximum;
+        if (minimum != null && submittedValue < minimum)
+            return minimum;
+        
         if ((minimum == null || newValue >= minimum.intValue())
                 && (maximum == null || newValue <= maximum.intValue())) {
             return newValue;
