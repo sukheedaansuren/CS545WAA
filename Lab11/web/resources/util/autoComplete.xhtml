@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"    
+    xmlns:composite="http://java.sun.com/jsf/composite">
+    
+    <!-- INTERFACE --> 
+    <composite:interface>
+      <composite:attribute name="value" required="true"/>
+      <composite:attribute name="completionItems" required="true"/>        
+    </composite:interface> 
+
+    <!-- IMPLEMENATION -->          
+    <composite:implementation>
+      <h:outputScript library="javascript" 
+         name="prototype-1.6.0.2.js" target="head"/>
+        
+      <h:outputScript library="javascript" 
+         name="autoComplete.js" target="head"/>
+      
+      <h:inputText id="input" value="#{cc.attrs.value}" 
+         valueChangeListener="#{autocompleteListener.valueChanged}"
+         onkeyup="com.corejsf.updateCompletionItems(this, event)"
+         onblur="com.corejsf.inputLostFocus(this)"/>
+          
+      <h:selectOneListbox id="listbox" style="display: none"
+         valueChangeListener="#{autocompleteListener.completionItemSelected}">
+        
+          <f:selectItems value="#{cc.attrs.completionItems}"/>
+          <f:ajax render="input"/>
+          
+      </h:selectOneListbox>
+    </composite:implementation>    
+</ui:composition>
